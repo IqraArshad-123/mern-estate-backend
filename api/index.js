@@ -21,13 +21,17 @@ app.use(express.json());
 app.use(cookieParser());
 
 // 🔹 CORS configuration for local frontend
+import cors from 'cors';
+
 app.use(cors({
   origin: [
-    'http://localhost:5173', // for local development
+    'http://localhost:5173', // local dev
     'https://mern-estate-frontend-nine.vercel.app' // deployed frontend
   ],
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   credentials: true
 }));
+
 
 
 // ROUTES
