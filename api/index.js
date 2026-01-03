@@ -1,3 +1,4 @@
+import serverless from 'serverless-http';
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -50,3 +51,4 @@ app.use((err, req, res, next) => {
   });
 });
 
+export default serverless(app);
