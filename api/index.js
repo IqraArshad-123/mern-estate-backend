@@ -70,10 +70,7 @@ const app = express();
 
 /* 🔹 CORS – ALWAYS FIRST */
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://mern-estate-frontend-nine.vercel.app'
-  ],
+  origin: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
